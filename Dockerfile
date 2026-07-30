@@ -1,12 +1,12 @@
-# استخدم الصورة الموجودة
-FROM knhfdsjj/mohamed-alamia:v3
+FROM python:3.11-slim
 
-# نسخ كود البوت
-COPY bot.py /app/bot.py
-COPY requirements.txt /app/requirements.txt
+WORKDIR /app
 
-# تثبيت المتطلبات
-RUN pip install -r /app/requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# تشغيل البوت
-CMD ["python3", "/app/bot.py"]
+COPY bot_real.py .
+
+ENV BOT_TOKEN=""
+
+CMD ["python3", "bot_real.py"]
