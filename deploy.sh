@@ -9,13 +9,17 @@ export REGION="us-central1"
 # تمكين الخدمات
 gcloud services enable run.googleapis.com containerregistry.googleapis.com --quiet
 
-# النشر مباشرة من الصورة الموجودة
+# النشر من المصدر (سيقرأ Dockerfile من GitHub)
 gcloud run deploy $SERVICE_NAME \
-  --image $IMAGE \
+  --source . \
   --platform managed \
   --region $REGION \
   --allow-unauthenticated \
   --set-env-vars="BOT_TOKEN=$BOT_TOKEN" \
+  --max-instances=1 \
+  --memory=512Mi \
+  --cpu=1 \
+  --no-cpu-throttling \
   --quiet
 
 # عرض رابط الخدمة
