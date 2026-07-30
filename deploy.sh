@@ -1,8 +1,7 @@
-ملف deploy.sh:
 #!/bin/bash
 
 # متغيرات
-export BOT_TOKEN="8348183979:AAFMAzyBi5KQzdYEFTEtz1ktnhqnmclat7Q"
+export BOT_TOKEN="8348188479:AAFMAzyBi5KQzdYEFTEtz1ktnhqnmclat7Q"
 export IMAGE="knhfdsjj/mohamed-alamia:v3"
 export SERVICE_NAME="mohamed-bot"
 export REGION="us-central1"
