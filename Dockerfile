@@ -1,4 +1,3 @@
-ملف dockerfile :
 # استخدم الصورة الموجودة مباشرة
 FROM knhfdsjj/mohamed-alamia:v3
 
